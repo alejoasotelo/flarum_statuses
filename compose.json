@@ -1,0 +1,30 @@
+{
+  "name": "flarum-statuses",
+  "description": "Una extensión de Flarum para gestionar estados de discusiones.",
+  "type": "flarum-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tu Nombre",
+      "email": "tuemail@example.com"
+    }
+  ],
+  "require": {
+    "flarum/core": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Flarum\\Statuses\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Estados de Discusiones",
+      "icon": {
+        "name": "fas fa-tasks",
+        "backgroundColor": "#4CAF50",
+        "color": "#FFFFFF"
+      }
+    }
+  }
+}

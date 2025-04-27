@@ -1,0 +1,6 @@
+en:
+  flarum-statuses:
+    status:
+      open: "Open"
+      in_progress: "In Progress"
+      resolved: "Resolved"

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  flarum:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flarum_dev
+    ports:
+      - "8080:80"
+    volumes:
+      - ./extensions:/flarum/extensions
+      - ./storage:/flarum/storage
+      - ./config.php:/flarum/config.php
+    environment:
+      - FLARUM_DEBUG=true
+
+  database:
+    image: mariadb:10.5
+    container_name: flarum_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: flarum
+      MYSQL_USER: flarum
+      MYSQL_PASSWORD: flarum
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

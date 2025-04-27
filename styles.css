@@ -1,0 +1,12 @@
+.Discussion-status {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.Discussion-status.in-progress {
+    color: #FFC107;
+}
+
+.Discussion-status.resolved {
+    color: #F44336;
+}
